@@ -10,12 +10,17 @@ public class DamkaBoard {
 			row += "* ";
 		}
 		row += "*";
-		for (int j = 0; j < size; j++)
+		for (int j = 0; j < size-1; j++)
 		{
-			if (j % 2 == 1) {
+			if (j % 2 == 1) { //Adds first " " for even rows
 				System.out.print(" ");
 			}
 			System.out.println(row);
 		}
+		if (size % 2 == 0) { //Checks if the last row should start with " "
+			System.out.print(" " + row);
+		}
+		else
+			System.out.print(row);
 	}
 }
