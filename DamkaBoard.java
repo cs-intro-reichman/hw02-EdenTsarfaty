@@ -3,17 +3,19 @@
  */
 public class DamkaBoard {
 	public static void main(String[] args) {
-		int row_col = Integer.parseInt(args[0]);
-		for (int i=0; i < row_col; i++)
+		int size = Integer.parseInt(args[0]);
+		String row = "";
+		for (int i = 0; i < size; i++)
 		{
-			if (i % 2 == 1) {
+			row += "* ";
+		}
+		row += "*";
+		for (int j = 0; j < size; j++)
+		{
+			if (j % 2 == 1) {
 				System.out.print(" ");
 			}
-			for (int j = 0; j < row_col; j++)
-			{
-				System.out.print("* ");
-			}
-			System.out.println();
+			System.out.println(row);
 		}
 	}
 }
