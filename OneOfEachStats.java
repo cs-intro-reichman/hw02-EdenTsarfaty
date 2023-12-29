@@ -22,7 +22,7 @@ public class OneOfEachStats {
 		int family_of_4p = 0;
 		for (int i = 0; i < iterations; i++) {
 			while (!(boy_born && girl_born)) {
-				if (Math.random() > 0.5) {
+				if (generator.nextDouble() > 0.5) {
 					boy_born = true;
 				} else {
 					girl_born = true;
