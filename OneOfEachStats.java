@@ -48,17 +48,17 @@ public class OneOfEachStats {
 				" children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + family_of_2);
 		System.out.println("Number of families with 3 children: " + family_of_3);
-		System.out.println("Number of families with 4 children: " + family_of_4p);
+		System.out.println("Number of families with 4 or more children: " + family_of_4p);
 		System.out.print("The most common number of children is ");
 		if (family_of_2 > family_of_3) {
-			System.out.print("2.");
+			System.out.println("2.");
 		}
 		else {
 			if (family_of_3 > family_of_4p) {
-				System.out.print("3.");
+				System.out.println("3.");
 			}
 			else {
-				System.out.print("4.");
+				System.out.println("4.");
 			}
 		}
 		    
