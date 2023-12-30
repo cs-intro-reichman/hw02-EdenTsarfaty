@@ -4,23 +4,22 @@
 public class DamkaBoard {
 	public static void main(String[] args) {
 		int size = Integer.parseInt(args[0]);
-		String row = "";
-		for (int i = 1; i < size; i++)
-		{
-			row += "* ";
-		}
-		row += "*";
-		for (int j = 1; j < size; j++)
-		{
-			if (j % 2 == 0) { //Adds first " " for even rows
-				System.out.print(" ");
+		for (int i = 0; i <= size; i++) {
+			if (i % 2 == 0) {
+				for (int j = 1; j <= size; j++) {
+					System.out.print("* ");
+				}
+			} else {
+				for (int j = 1; j <= size; j++) {
+					System.out.print(" *");
+				}
 			}
-			System.out.println(row);
+			if (i == size-1) {
+				break;
+			}
+			else {
+				System.out.println();
+			}
 		}
-		if (size % 2 == 0) { //Checks if the last row should start with " "
-			System.out.print(" " + row);
-		}
-		else
-			System.out.print(row);
 	}
 }
