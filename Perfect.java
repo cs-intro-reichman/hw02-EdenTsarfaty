@@ -14,7 +14,6 @@ public class Perfect {
 			if (num % i == 0)
 			{
 				sum += i;
-				// #Feedback: we can reduce it to one condition and operation:
 				if (sum < num) { 
 					score += (" + " + i);
 				} else {
