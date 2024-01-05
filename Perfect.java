@@ -6,19 +6,23 @@ public class Perfect {
 		int num = Integer.parseInt(args[0]);
 		int sum = 0;
 		String score = "";
-		for (int i = 1; i <= num/2; i++)  //No need to check numbers greater than num/2
+		boolean isPerfect = true;
+		
+		// #Feedback: You can do even better, no need to check numbers greater than the square root of num.
+		for (int i = 1; i <= Math.sqrt(num); i++)  
 		{
 			if (num % i == 0)
 			{
 				sum += i;
-				if (sum < num) { //Checks if i is the final divisor of num
-					score += (i + " + ");
-				}
-				else {
-					score += (i);
+				// #Feedback: we can reduce it to one condition and operation:
+				if (sum <= num) { 
+					score += (" + " + i);
 				}
 			}
 		}
+		
+		score = score.substring(4); // Removing the first " + "
+		
 		if (sum==num) {
 			System.out.print(num + " is a perfect number since " + num
 					+ " = " + score);
