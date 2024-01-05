@@ -15,14 +15,14 @@ public class Perfect {
 			{
 				sum += i;
 				// #Feedback: we can reduce it to one condition and operation:
-				if (sum <= num) { 
+				if (sum < num) { 
 					score += (" + " + i);
+				} else {
+					score += i;
+					break;
 				}
 			}
 		}
-		
-		score = score.substring(4); // Removing the first " + "
-		
 		if (sum==num) {
 			System.out.print(num + " is a perfect number since " + num
 					+ " = " + score);
