@@ -18,7 +18,8 @@ public class Perfect {
 				if (sum < num) { 
 					score += (" + " + i);
 				} else {
-					score += i;
+					score += (i);
+					// #Feedback: for both equal\greather cases we can stop the loop.
 					break;
 				}
 			}
