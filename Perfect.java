@@ -8,8 +8,7 @@ public class Perfect {
 		String score = "";
 		boolean isPerfect = true;
 		
-		// #Feedback: You can do even better, no need to check numbers greater than the square root of num.
-		for (int i = 1; i <= Math.sqrt(num); i++)  
+		for (int i = 1; i <= n/2; i++)  
 		{
 			if (num % i == 0)
 			{
