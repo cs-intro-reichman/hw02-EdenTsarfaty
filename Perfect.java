@@ -6,19 +6,16 @@ public class Perfect {
 		int num = Integer.parseInt(args[0]);
 		int sum = 0;
 		String score = "";
-		boolean isPerfect = true;
-		
-		for (int i = 1; i <= num/2; i++)  
+		for (int i = 1; i <= num/2; i++)  //No need to check numbers greater than num/2
 		{
 			if (num % i == 0)
 			{
 				sum += i;
-				if (sum < num) { 
-					score += (" + " + i);
-				} else {
+				if (sum < num) { //Checks if i is the final divisor of num
+					score += (i + " + ");
+				}
+				else {
 					score += (i);
-					// #Feedback: for both equal\greather cases we can stop the loop.
-					break;
 				}
 			}
 		}
