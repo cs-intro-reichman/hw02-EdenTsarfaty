@@ -46,13 +46,11 @@ public class OneOfEachStats1 {
 		if (family_of_2 > family_of_3) {
 			System.out.print("2.");
 		}
-		else {
-			if (family_of_3 > family_of_4p) {
-				System.out.print("3.");
-			}
-			else {
-				System.out.print("4.");
-			}
+		// #Feedback: Better to not nest ifs when the condition is continuous to the previous
+		else if (family_of_3 > family_of_4p) {
+			System.out.print("3.");
+		} else {
+			System.out.print("4.");
 		}
 	}
 }

@@ -7,8 +7,8 @@ public class OneOfEach {
 	public static void main (String[] args) {
 		boolean boy_born = false, girl_born = false;
 		int children = 0;
-		while (!(boy_born && girl_born))
-		{
+		// #Feedback: Classic case to use do\while - first itteration will always happen 
+		do {
 			if (Math.random() > 0.5) {
 				boy_born = true;
 				System.out.print("b ");
@@ -18,7 +18,7 @@ public class OneOfEach {
 				System.out.print("g ");
 			}
 			children++;
-		}
+		} while (!(boy_born && girl_born))
 		System.out.print("\nYou made it... and you now have " + children + " children.");
 	}
 }
